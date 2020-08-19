@@ -1,4 +1,4 @@
-Metadata-Version: 1.0
+Metadata-Version: 2.1
 Name: VecLib
 Version: 1.0.0
 Summary: Python lib for vector for n dimensions
@@ -9,3 +9,5 @@ License: MIT
 Description: UNKNOWN
 Keywords: vector vectors 2d 3d
 Platform: UNKNOWN
+Requires-Python: >=3.4
+Description-Content-Type: text/markdown
