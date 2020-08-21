@@ -1,12 +1,12 @@
 Metadata-Version: 2.1
-Name: VecLib
-Version: 1.1.0
+Name: vecLib
+Version: 1.0.0
 Summary: Python lib for vector for n dimensions
 Home-page: https://github.com/pengovn/PyVecLib
 Author: Nicolas Pengov
 Author-email: pengovn@gmail.com
 License: MIT
-Description: UNKNOWN
+Description: # **vecLib**
 Keywords: vector vectors 2d 3d
 Platform: UNKNOWN
 Requires-Python: >=3.4
