@@ -63,5 +63,11 @@ class Vec2d(Vec):
             raise TypeError(f"alpha must be int or float type not {type(alpha)}")
         
     def cross(self, vec):
-        raise NotImplementedError()
+        if issubclass(type(vec), (Vec, Vec2d)):
+            if self._dim == vec._dim:
+                return self.x * vec.y - self.y * vec.x
+            else:
+                raise TypeError(f"vec must have 2 dimensions not {vec._dim}")
+        else:
+            raise TypeError(f"vec must be Vec or Vec2d type not {type(vec)}")
     

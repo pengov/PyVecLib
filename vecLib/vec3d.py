@@ -80,4 +80,10 @@ class Vec3d(Vec):
             raise TypeError(f"alpha must be int or float type not {type(alpha)}")
         
     def cross(self, vec):
-        raise NotImplementedError()
+        if issubclass(type(vec), (Vec, Vec3d)):
+            if self._dim == vec._dim:
+                return Vec3d(self.y*vec.z - self.z*vec.y, self.z*vec.x - self.x*vec.z, self.x*vec.y - self.y*vec.x)
+            else:
+                raise TypeError(f"vec must have 3 dimensions not {vec._dim}")
+        else:
+            raise TypeError(f"vec must be Vec or Vec3d type not {type(vec)}")
