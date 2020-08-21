@@ -1,9 +1,5 @@
 README.md
 setup.py
-VecLib.egg-info/PKG-INFO
-VecLib.egg-info/SOURCES.txt
-VecLib.egg-info/dependency_links.txt
-VecLib.egg-info/top_level.txt
 vecLib/__init__.py
 vecLib/vec.py
 vecLib/vec2d.py
