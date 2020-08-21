@@ -6,3 +6,4 @@ vecLib/__pycache__/vec2d.cpython-38.pyc
 vecLib/__pycache__/vec.cpython-38.pyc
 vecLib/__pycache__/vec3d.cpython-38.pyc
 .gitignore
+instruction.txt
