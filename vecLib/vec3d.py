@@ -14,7 +14,7 @@ class Vec3d(Vec):
                         raise TypeError("x_or_triple need to contain olny int, float, or complex number")
                 else:
                     raise TypeError(f"x_or_triple need to have 2 dim not {len(x_or_triple)}")
-            elif x is None:
+            elif x_or_triple is None:
                 super().__init__(0, 0, 0)
                 self.x, self.y, self.z = 0, 0, 0
             else:
@@ -65,7 +65,7 @@ class Vec3d(Vec):
             if issubclass(type(axis), (Vec, Vec3d)):
                 if axis._dim == self._dim:
                     u = axis.normalize()
-                    c, s = cos(alpha), sin(alpha)
+                    c, s = m.cos(alpha), m.sin(alpha)
 
                     d1 = Vec3d((c + u.x * u.x * (1-c)), (u.x * u.y * (1-c) - u.z * s), (u.x * u.z * (1-c) + u.y * s))
                     d2 = Vec3d((u.y * u.x * (1-c) + u.z * s), (c + u.y * u.y * (1-c)), (u.y * u.z * (1-c) - u.x * s))
@@ -87,3 +87,11 @@ class Vec3d(Vec):
                 raise TypeError(f"vec must have 3 dimensions not {vec._dim}")
         else:
             raise TypeError(f"vec must be Vec or Vec3d type not {type(vec)}")
+        
+    @classmethod
+    def zeros(cls):
+        return Vec3d(0., 0., 0.)
+    
+    @classmethod
+    def ones(cls):
+        return Vec3d(1., 1., 1.)

@@ -14,7 +14,7 @@ class Vec2d(Vec):
                         raise TypeError("x_or_pair need to contain olny int, float, or complex number")
                 else:
                     raise TypeError(f"x_or_pair need to have 2 dim not {len(x_or_pair)}")
-            elif x is None:
+            elif x_or_pair is None:
                 super().__init__(0, 0)
                 self.x, self.y = 0, 0
             else:
@@ -70,4 +70,29 @@ class Vec2d(Vec):
                 raise TypeError(f"vec must have 2 dimensions not {vec._dim}")
         else:
             raise TypeError(f"vec must be Vec or Vec2d type not {type(vec)}")
+
+    def get_angle(self):
+        return m.cos(self[0])
     
+    def get_angle_degrees(self):
+        return m.degrees(self.get_angle())
+    
+    def get_angle_between(self, vec):
+        return m.acos(self.dot(vec)/(self.norm()*vec.norm()))
+    
+    def get_angle_between_degrees(self, vec):
+        return m.degrees(self.get_angle_between(vec))
+    
+    def perpendicular(self):
+        return Vec2d(-self[1], self[0])
+    
+    def perpendicular_normal(self):
+        return self.perpendicular.normalize()
+    
+    @classmethod
+    def zeros(cls):
+        return Vec2d(0., 0.)
+    
+    @classmethod
+    def ones(cls):
+        return Vec2d(1., 1.)
