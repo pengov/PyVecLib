@@ -23,5 +23,3 @@ You can contact me to *`pengovn@gmail.com`*
 
 [Github]: https://github.com/pengovn/PyVecLib
 [pypi]: https://pypi.org/project/VecLib/
-plouf
-plouf
