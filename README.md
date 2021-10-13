@@ -1,11 +1,11 @@
 # vecLib
-*vecLib/PyVecLib* is cross plateform vector library for Python.
-He can bu used for vectors manipulation for video games or for simulations.
+*vecLib/PyVecLib* is a cross platform vector library for Python.
+He can be used for vector manipulation for video games or for simulations.
 
 * vecLib [Github]
 * vecLib [Pypi]
 
-vecLib is a pure python library so he didn't need some requirements except python>=3.4
+VecLib is a pure python library so he didn't need any requirements except python>=3.4
 
 ## Installation
 vecLib is installable from PyPi
